@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Authentication</title>
+    <style>
+        /* Style for the login form */
+    form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        width: 300px;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px grey;
+    }
+
+    input[type="submit"] {
+        width: 320px;
+        padding: 10px;
+        margin: 10px 0;
+        border: none;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #45a049;
+    }
+
+    .error-message {
+        color: red;
+        margin: 10px 0;
+    }
+
+  /* Style for the header */
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+  /* Style for the container */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    </style>
+</head>
+<body>
+	<h1>User Registration</h1>
+	<form method="POST" action="/register">
+		<label for="email">Email:</label>
+		<input type="email" name="email" id="email" required><br><br>
+		
+		<label for="name">Name:</label>
+		<input type="text" name="name" id="name" required><br><br>
+
+		<label for="phone_number">Phone Number:</label>
+		<input type="text" name="phone_number" id="phone_number" required><br><br>
+
+		<label for="password">Password:</label>
+		<input type="password" name="password" id="password" required><br><br>
+
+		<input type="submit" value="Register">
+	</form>
+
+	<hr>
+
+	<h1>User Login</h1>
+	<form method="POST" action="/login">
+		<label for="email">Email:</label>
+		<input type="email" name="email" id="email" required><br><br>
+
+		<label for="password">Password:</label>
+		<input type="password" name="password" id="password" required><br><br>
+
+		<input type="submit" value="Login">
+	</form>
+</body>
+</html>
